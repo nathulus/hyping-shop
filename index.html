@@ -224,7 +224,7 @@ document.getElementById("confirmOrder").onclick=async()=>{
   const pseudoMinecraft=document.getElementById("pseudoMinecraft").value.trim();
   const order=buildOrder(pseudoDiscord,pseudoMinecraft);
   try{
-    const WEBHOOK_URL="https://discord.com/api/webhooks/1407750460026392647/RV_R3IIfwsHnFNXdQhIlSZhW1YWXwwLwvOJoQm3qou6xFs5e9xJB-vi1l36GKSdpy87t"; // ⚠️ Mets ton vrai webhook
+    const WEBHOOK_URL="https://discord.com/api/webhooks/1410210662797541456/KILtB46TRvAJH1-fvisTcnAdUpJklEQ1KwZF7btsayh1LvnVHijqO6zH02L-yXoFqG27"; // ⚠️ Mets ton vrai webhook
     const res=await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)});
     if(!res.ok)throw new Error("HTTP "+res.status);
     toast("Commande envoyée ✅");modal.style.display="none";CART=[];syncCartUI();
@@ -246,3 +246,4 @@ loadProducts();syncCartUI();
 </script>
 </body>
 </html>
+
